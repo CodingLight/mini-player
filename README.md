@@ -4,6 +4,8 @@ A mini Apple Music-style web player built with **React 18 + Tailwind CSS v4 + Vi
 
 > An "Aurora × Apple Music" aesthetic — glassmorphism, Now Playing layout, a per-track aurora gradient, a spinning vinyl disc, a pulsing equalizer, and a manual light / dark theme toggle.
 
+**Languages:** English | [简体中文](./README_zh.md)
+
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 [![React](https://img.shields.io/badge/React-18.2-149eca?logo=react&logoColor=white)](https://react.dev)
 [![Vite](https://img.shields.io/badge/Vite-8-646cff?logo=vite&logoColor=white)](https://vitejs.dev)
@@ -138,7 +140,8 @@ mini-player/
 ├── eslint.config.js
 ├── package.json
 ├── LICENSE
-└── README.md
+├── README.md
+└── README_zh.md
 ```
 
 ---
