@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Tailwind v4 默认让 dark: 跟随 prefers-color-scheme 媒体查询。
+   我们改成类策略，让 ThemeProvider 可以手动翻转 <html class="dark">，
+   并把选择持久化到 localStorage。
+   --------------------------------------------------------------------------- */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------------------------------------------------------------------------
+   苹果音乐风格设计令牌（Tailwind v4 @theme 指令）
+   --------------------------------------------------------------------------- */
+@theme {
+  /* 苹果系统字体栈：优先 SF Pro，跨平台回退到系统默认 */
+  --font-sans:
+    "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", "Segoe UI", system-ui, sans-serif;
+  --font-mono:
+    "SF Mono", ui-monospace, "Menlo", "Cascadia Mono", "Consolas", monospace;
+
+  /* 苹果系统色板（来源：Apple HIG / iOS System Colors） */
+  --color-apple-pink: #ff375f;
+  --color-apple-red: #ff3b30;
+  --color-apple-orange: #ff9f0a;
+  --color-apple-yellow: #ffd60a;
+  --color-apple-green: #30d158;
+  --color-apple-mint: #00c7be;
+  --color-apple-teal: #40c8e0;
+  --color-apple-cyan: #64d2ff;
+  --color-apple-blue: #0a84ff;
+  --color-apple-indigo: #5e5ce6;
+  --color-apple-purple: #bf5af2;
+  --color-apple-pink-soft: #ff2d55;
+
+  /* 苹果分层灰阶背景 */
+  --color-apple-bg-light: #fbfbfd;
+  --color-apple-bg-dark: #000000;
+  --color-apple-card-light: rgba(255, 255, 255, 0.6);
+  --color-apple-card-dark: rgba(28, 28, 30, 0.6);
+
+  /* 自定义阴影（贴合苹果 UI 的层次感） */
+  --shadow-apple-card: 0 8px 40px rgba(0, 0, 0, 0.12);
+  --shadow-apple-play: 0 8px 24px rgba(0, 0, 0, 0.35);
+
+  /* 动画 */
+  --animate-aurora-a: auroraA 18s ease-in-out infinite;
+  --animate-aurora-b: auroraB 22s ease-in-out infinite;
+  --animate-aurora-c: auroraC 26s ease-in-out infinite;
+  --animate-spin-slow: spin 45s linear infinite;
+}
+
+/* 极光呼吸动画：缓慢平移 + 缩放 */
+@keyframes auroraA { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(60px, 40px) scale(1.08); } }
+@keyframes auroraB { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-50px, 30px) scale(1.12); } }
+@keyframes auroraC { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(40px, -40px) scale(1.06); } }
+
+/* ---------------------------------------------------------------------------
+   全局样式
+   --------------------------------------------------------------------------- */
+html, body, #root {
+  height: 100%;
+}
+
+html {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  background: var(--color-apple-bg-light);
+  color: #1d1d1f;
+  letter-spacing: -0.01em;
+}
+
+.dark body {
+  background: var(--color-apple-bg-dark);
+  color: #f5f5f7;
+}
+
+/* 苹果风格的细滚动条（仅作用于播放列表） */
+.playlist-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+}
+.playlist-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.playlist-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.playlist-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+}
+.dark .playlist-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* 尊重用户的"减少动效"偏好：关闭所有装饰性动画 */
+@media (prefers-reduced-motion: reduce) {
+  .aurora-a, .aurora-b, .aurora-c,
+  [class*="animate-"] {
+    animation: none !important;
+  }
+}

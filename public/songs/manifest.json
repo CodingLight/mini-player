@@ -1,0 +1,12 @@
+{
+  "tracks": [
+    { "id": "breaching",         "title": "Breaching",            "artist": "Mini Player", "duration": 224, "src": "/songs/Breaching.wav" },
+    { "id": "forgotten-memories", "title": "Forgotten Memories",   "artist": "Mini Player", "duration": 198, "src": "/songs/Forgotten Memories.wav" },
+    { "id": "glacier-blue",      "title": "Glacier Blue",         "artist": "Mini Player", "duration": 184, "src": "/songs/Glacier Blue.wav" },
+    { "id": "in-love",           "title": "In Love",              "artist": "Mini Player", "duration": 172, "src": "/songs/In Love.wav" },
+    { "id": "keep-you-away",     "title": "Keep You Away",        "artist": "Mini Player", "duration": 256, "src": "/songs/Keep You Away.wav" },
+    { "id": "lemon-balm",        "title": "Lemon Balm",           "artist": "Mini Player", "duration": 195, "src": "/songs/Lemon Balm.wav" },
+    { "id": "momentary-bliss",   "title": "Momentary Bliss",      "artist": "Mini Player", "duration": 152, "src": "/songs/Momentary Bliss.wav" },
+    { "id": "nothing-you-really-want", "title": "nothing you really want", "artist": "Mini Player", "duration": 148, "src": "/songs/nothing you really want.wav" }
+  ]
+}
