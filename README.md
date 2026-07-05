@@ -2,6 +2,8 @@
 
 A mini Apple Music-style web player built with **React 18 + Tailwind CSS v4 + Vite**.
 
+> 🚀 **Vibe-coded** — this project was designed and built end-to-end through *vibe coding* — rapid, intention-driven collaboration with AI, keeping the creative flow front and centre while letting the model handle the boilerplate.
+
 > An "Aurora × Apple Music" aesthetic — glassmorphism, Now Playing layout, a per-track aurora gradient, a spinning vinyl disc, a pulsing equalizer, and a manual light / dark theme toggle.
 
 **Languages:** English | [简体中文](./README_zh.md)
@@ -14,9 +16,7 @@ A mini Apple Music-style web player built with **React 18 + Tailwind CSS v4 + Vi
 [![Lint](https://img.shields.io/badge/lint-clean-brightgreen)](#-development)
 [![Build](https://img.shields.io/badge/build-passing-brightgreen)](#-development)
 
-<p align="center">
-  <img src="src/assets/hero.png" alt="Mini Player screenshot" width="720" />
-</p>
+
 
 ---
 
@@ -41,7 +41,7 @@ A mini Apple Music-style web player built with **React 18 + Tailwind CSS v4 + Vi
 
 | Light theme | Dark theme |
 | --- | --- |
-| _Add a screenshot here_ | _Add a screenshot here_ |
+| <img src="screenshots/Snipaste_02.png" alt="Mini Player screenshot 1" width="48%" /> | <img src="screenshots/Snipaste_01.png" alt="Mini Player screenshot 1" width="48%" /> |
 
 ---
 

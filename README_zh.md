@@ -2,6 +2,8 @@
 
 一款迷你版、Apple Music 风格的 Web 音乐播放器，基于 **React 18 + Tailwind CSS v4 + Vite** 构建。
 
+> 🚀 **Vibe-coded** — 本项目从设计到实现，全程通过 *vibe coding*（意念驱动的 AI 协作）方式完成：让创意与心流始终走在前面，把模板代码交给模型处理。
+
 > 融合 "Aurora × Apple Music" 视觉风格: 毛玻璃质感、Now Playing 布局、按歌曲切换的极光渐变、旋转黑胶唱片、脉冲均衡器，以及手动明 / 暗主题切换。
 
 **语言:** [English](./README.md) | 简体中文
@@ -14,9 +16,7 @@
 [![Lint](https://img.shields.io/badge/lint-clean-brightgreen)](#development-zh)
 [![Build](https://img.shields.io/badge/build-passing-brightgreen)](#development-zh)
 
-<p align="center">
-  <img src="src/assets/hero.png" alt="Mini Player 截图" width="720" />
-</p>
+
 
 ---
 
@@ -41,7 +41,7 @@
 
 | 浅色主题 | 深色主题 |
 | --- | --- |
-| _在此添加截图_ | _在此添加截图_ |
+| <img src="screenshots/Snipaste_02.png" alt="Mini Player screenshot 1" width="48%" /> | <img src="screenshots/Snipaste_01.png" alt="Mini Player screenshot 1" width="48%" /> |
 
 ---
 
